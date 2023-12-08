@@ -2,10 +2,10 @@ import React, { FC } from 'react';
 import { twMerge } from 'tailwind-merge';
 import BaseText from '../base-text/BaseText';
 import BaseView from '../base-view/BaseView';
-import { BaseButtonProps } from './BaseButton.interface';
 import CustomIconProvider from '@/providers/CustomIconProvider';
+import { ButtonProps } from '@/components/button/Button.interface';
 
-const BaseButton: FC<BaseButtonProps> = (props) => {
+const BaseButton: FC<ButtonProps> = (props) => {
   const {
     label,
     name,
@@ -27,12 +27,9 @@ const BaseButton: FC<BaseButtonProps> = (props) => {
     p-3
     rounded-md
     bg-primary-dark
-    dark:bg-primary-dark
     active:bg-primary
-    dark:active:bg-primary
     disabled:cursor-not-allowed
     disabled:bg-grey-300
-    dark:disabled:bg-grey-500
     gap-2 box-border
     relative
     group
@@ -42,14 +39,12 @@ const BaseButton: FC<BaseButtonProps> = (props) => {
   const textClasses = twMerge(`
     font-semibold
     text-slate-100
-    dark:text-slate-200
     text-sm
     ${textClassName || ''}
     ${
       disabled
       && `
       text-slate-800
-      dark:text-slate-200
     `
     }
   `);

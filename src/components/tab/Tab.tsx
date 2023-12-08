@@ -5,41 +5,36 @@ import { twMerge } from 'tailwind-merge';
 import { TabProps } from '@/components/tab/Tab.interface';
 import BaseView from '@/components/base-view/BaseView';
 import TextButton from '@/components/button/TextButton';
+import { cn } from '@/utils/commonUtils';
 
 const Tab: FC<TabProps> = (props) => {
   const { className, items, textClassName, onClick } = props;
   const [currentTab, setCurrentTab] = useState<string | undefined>(props.currentTab);
   const classes = twMerge(`
-    flex flex-row flex-1 justify-evenly dark:bg-slate-600 dark:border-slate-700
+    flex flex-row flex-1 justify-evenly rounded-full bg-white-200
     ${className}
   `);
 
   const textClasses = twMerge(`
-    text-slate-700 font-semibold
+    text-slate-400 font-semibold
     hover:scale-110
     ${textClassName}
   `);
 
   return (
     <BaseView className={classes}>
-      {items.map((tab) => {
-        const textClassName = twMerge(`${textClasses} ${currentTab === tab.label ? 'text-slate-50' : ''}`);
-
-        const buttonClassName = `py-1 my-2 px-4 ${currentTab === tab.label ? 'bg-slate-400 dark:bg-green-450' : ''}`;
-
-        return (
-          <TextButton
-            key={tab.label}
-            label={tab.label}
-            className={buttonClassName}
-            textClassName={textClassName}
-            onClick={() => {
-              setCurrentTab(tab.label);
-              (tab?.onClick && tab?.onClick(tab.label)) || (onClick && onClick(tab.label));
-            }}
-          />
-        );
-      })}
+      {items.map((tab) => (
+        <TextButton
+          key={tab.label}
+          label={tab.label}
+          className={cn('my-2 px-4 py-0.5', { 'rounded-full bg-slate-200': currentTab === tab.label })}
+          textClassName={cn(textClasses, { 'text-slate-500': currentTab === tab.label })}
+          onClick={() => {
+            setCurrentTab(tab.label);
+            (tab?.onClick && tab?.onClick(tab.label)) || (onClick && onClick(tab.label));
+          }}
+        />
+      ))}
     </BaseView>
   );
 };

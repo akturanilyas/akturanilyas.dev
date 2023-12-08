@@ -5,14 +5,11 @@ import { TabItem } from '@/components/tab/Tab.interface';
 
 export const Header = () => {
   const classes = cn(`
-  bg-slate-200 
-  h-16 w-full
-  justify-center items-center 
-  border-b
-  border-slate-200
+  h-16 justify-center items-center
+  border-b border-slate-200
   `);
 
-  const tabItems: Array<TabItem> = [{ label: 'a' }, { label: 'ab' }];
+  const tabItems: Array<TabItem> = [{ label: 'Intro' }, { label: 'Intro2' }, { label: 'Footer' }];
 
   return (
     <BaseView className={classes}>

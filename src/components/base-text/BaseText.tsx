@@ -8,7 +8,6 @@ const BaseText: FC<TextProps> = (props) => {
 
   const classes = twMerge(`
     text-slate
-    dark:text-slate-200
     ${className || ''}
   `);
 

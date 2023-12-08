@@ -1,19 +1,35 @@
 import BaseView from '@/components/base-view/BaseView';
+import { cn } from '@/utils/commonUtils';
+import { FC } from 'react';
 import BaseText from '@/components/base-text/BaseText';
+
+export interface TransparentCircleProps {
+  className?: string;
+}
+
+const TransparentCircle: FC<TransparentCircleProps> = (props) => {
+  const { className } = props;
+
+  return (
+    <BaseView
+      className={cn('animate-blob absolute h-[20rem] w-[20rem] rounded-full opacity-70 blur-xl filter', className)}
+    />
+  );
+};
 
 export default function Home() {
   return (
-    <BaseView className={'h-full p-4'}>
-      <BaseView className={'h-1/3 rounded-md border bg-slate-200 p-4'}>
-        <BaseText
-          text={
-            `Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-             when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-              It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
-              It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently.`
-          }
-        />
+    <BaseView className={'h-full justify-center'}>
+
+      <BaseView className={'relative border-2 rounded-md bg-slate-200 items-center p-4 h-2/3'}>
+        <TransparentCircle className={'left-32 bg-purple-300 mix-blend-multiply'} />
+        <TransparentCircle className={'right-32 bg-yellow-300 mix-blend-multiply'} />
+        <TransparentCircle className={'top-32 bg-pink-300 mix-blend-multiply'} />
+        <BaseView className={'relative bg-red-900'}>
+          <BaseText text={'amsdkjamsdkamsd'} />
+          <BaseText text={'amsdkjamsdkamsd'} />
+          <BaseText text={'amsdkjamsdkamsd'} />
+        </BaseView>
       </BaseView>
     </BaseView>
   );

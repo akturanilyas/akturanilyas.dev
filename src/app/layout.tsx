@@ -16,9 +16,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang={'en'}>
       <body className={'h-screen bg-slate-100'}>
-        <BaseView className={'w-full items-center h-full'} >
-          <Header />
-          <BaseView className={'w-full lg:w-2/3 h-full'}>{children}</BaseView>
+        <BaseView className={'relative h-full w-full items-center bg-slate-100'}>
+          <BaseView className={'h-full w-full lg:w-2/3'}>
+            <Header />
+            {children}
+          </BaseView>
         </BaseView>
       </body>
     </html>
