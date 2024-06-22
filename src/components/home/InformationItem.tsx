@@ -1,7 +1,6 @@
 import { FC } from 'react';
 import { InformationItemInterface } from '@/components/home/InformationItem.interface';
 import BaseView from '@/components/base-view/BaseView';
-import BaseText from '@/components/base-text/BaseText';
 import { BaseLink } from '@/components/link/BaseLink';
 
 export const InformationItem: FC<InformationItemInterface> = (props) => {
@@ -13,5 +12,9 @@ export const InformationItem: FC<InformationItemInterface> = (props) => {
     </BaseView>
   );
 
-  return <BaseLink title={title} link={link}>{IconWithText}</BaseLink>;
+  return (
+    <BaseLink title={title} link={link}>
+      {IconWithText}
+    </BaseLink>
+  );
 };
