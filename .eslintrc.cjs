@@ -7,6 +7,7 @@ module.exports = {
     es2021: true
   },
   extends: [
+    'next',
     'plugin:react/recommended'
   ],
   overrides: [
@@ -649,5 +650,4 @@ module.exports = {
   },
   plugins: ['react', 'react-hooks', 'prettier', '@typescript-eslint'],
   rules: {},
-  ignorePatterns: ['src/components/icons/*', '__tests__/unit-tests/**/*', 'jest.config.cjs', 'dist'],
 };

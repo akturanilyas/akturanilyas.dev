@@ -1,6 +1,5 @@
-import { HTMLProps } from 'react';
+import { HTMLAttributes } from 'react';
 
-export interface TextProps extends HTMLProps<HTMLDivElement> {
+export interface TextProps extends HTMLAttributes<HTMLSpanElement> {
   text: string;
-  options?: Record<string, unknown>;
 }

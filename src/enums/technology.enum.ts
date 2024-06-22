@@ -1,0 +1,15 @@
+export enum Technology {
+  REACT = 'React',
+  ANGULAR = 'Angular',
+  VUE = 'Vue',
+  SVELTE = 'Svelte',
+  NODE = 'Node',
+  MONGODB = 'MongoDB',
+  MYSQL = 'MySQL',
+  POSTGRESQL = 'PostgreSQL',
+  TYPESCRIPT = 'TypeScript',
+  JAVASCRIPT = 'JavaScript',
+  HTML = 'HTML',
+  CSS = 'CSS',
+  SASS = 'Sass',
+}

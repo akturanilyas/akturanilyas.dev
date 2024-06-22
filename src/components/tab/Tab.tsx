@@ -5,7 +5,7 @@ import { twMerge } from 'tailwind-merge';
 import { TabProps } from '@/components/tab/Tab.interface';
 import BaseView from '@/components/base-view/BaseView';
 import TextButton from '@/components/button/TextButton';
-import { cn } from '@/utils/commonUtils';
+import { cn } from '@/lib/utils';
 
 const Tab: FC<TabProps> = (props) => {
   const { className, items, textClassName, onClick } = props;
