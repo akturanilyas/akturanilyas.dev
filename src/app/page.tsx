@@ -4,6 +4,8 @@ import { ProjectSection } from '@/components/home/ProjectSection';
 import { ExperienceSection } from '@/components/home/ExperienceSection';
 import { ErrorBoundary } from 'next/dist/client/components/error-boundary';
 
+export const revalidate = 604800;
+
 export default function Home() {
   return (
     <BaseView className={'h-full justify-center gap-8 my-24'}>
