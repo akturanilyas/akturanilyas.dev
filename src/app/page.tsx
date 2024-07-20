@@ -10,7 +10,6 @@ export const revalidate = 604800;
 export default function Home() {
   return (
     <BaseView className={'h-full justify-center gap-8 my-24'}>
-        <Button>ajsbdnjsasd</Button>
       <ErrorBoundary errorComponent={undefined}>
         <ProfileSection />
       </ErrorBoundary>

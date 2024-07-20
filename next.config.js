@@ -3,7 +3,7 @@ const nextConfig = {
   redirects: async () => [
     {
       source: '/:path*',
-      has: [{ type: 'host', value: 'www.akturanilyas.dev' }],
+      has: [{type: 'host', value: 'www.akturanilyas.dev'}],
       destination: 'https://akturanilyas.dev/:path*',
       permanent: true
     }

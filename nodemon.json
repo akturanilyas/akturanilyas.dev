@@ -1,0 +1,7 @@
+{
+  "watch": [".yalc", "server.js"],
+  "ext": "js,json,tsx,ts",
+  "ignore": ["node_modules"],
+  "exec": "rm -rf .next && next dev",
+  "delay": 3000
+}

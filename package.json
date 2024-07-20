@@ -8,9 +8,11 @@
     "start": "next start",
     "lint": "next lint",
     "tsc": "tsc",
-    "tsc:watch": "tsc --watch"
+    "tsc:watch": "tsc --watch",
+    "dev:nodemon": "nodemon"
   },
   "dependencies": {
+    "@akturanilyas/ui": "file:.yalc/@akturanilyas/ui",
     "@eslint/compat": "1.1.1",
     "@eslint/eslintrc": "3.1.0",
     "@eslint/js": "9.7.0",
@@ -38,6 +40,7 @@
     "eslint-config-next": "14.2.5",
     "eslint-plugin-prettier": "5.2.1",
     "eslint-plugin-react": "7.34.4",
+    "nodemon": "^3.1.4",
     "postcss": "8.4.39",
     "prettier": "3.3.3",
     "prettier-plugin-tailwindcss": "0.6.5",
