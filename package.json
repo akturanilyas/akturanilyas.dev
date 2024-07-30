@@ -12,7 +12,6 @@
     "dev:nodemon": "nodemon"
   },
   "dependencies": {
-    "@akturanilyas/ui": "file:.yalc/@akturanilyas/ui",
     "@next/third-parties": "14.2.5",
     "@radix-ui/react-slot": "1.1.0",
     "class-variance-authority": "0.7.0",
