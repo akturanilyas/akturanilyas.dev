@@ -17,7 +17,6 @@ export const metadata: Metadata = {
     siteName: 'Ilyas AKTURAN - Software Engineer',
     title: 'Ilyas AKTURAN - Software Engineer',
     description:
-    // eslint-disable-next-line max-len
       'Ilyas AKTURAN, Full-stack developer with 3+ years of experience in software development. Passionate about software development and web technologies.',
   },
 };
@@ -25,10 +24,18 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang={'en'}>
-    <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_ENV_GA_ID as string} />
-    <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_ENV_GA_ID as string} />
+      <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_ENV_GA_ID as string} />
+      <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_ENV_GA_ID as string} />
 
-    <body className={'bg-primary px-4'}>
+      <body
+        className={'bg-primary px-4'}
+        style={{
+            backgroundImage: 'url(/assets/background.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      >
         <BaseView className={'bg-primary relative h-full w-full items-center'}>
           <BaseView className={'h-full w-full md:w-full lg:w-2/3'}>{children}</BaseView>
         </BaseView>

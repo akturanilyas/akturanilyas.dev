@@ -7,7 +7,11 @@ import BaseView from '../base-view/BaseView';
 
 export const ProfileSection = () => (
   <BaseView>
-    <Card className={'flex flex-col items-center justify-between justify-items-center align-middle md:flex-row'}>
+    <Card
+      className={
+        'flex flex-col items-center justify-between justify-items-center border-none bg-opacity-50 align-middle backdrop-blur-md backdrop-filter md:flex-row'
+      }
+    >
       <CardContent className={'flex w-full flex-col items-center gap-4 p-4 md:flex-row md:justify-between md:p-6'}>
         <BaseView className={'md:w-1/3'}>
           <Image

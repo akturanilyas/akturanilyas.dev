@@ -7,6 +7,7 @@ import { FC } from 'react';
 import { getFormattedDate, getFormattedDiff } from '@/lib/dateUtils';
 import BaseText from '@/components/base-text/BaseText';
 import { Dot } from 'lucide-react';
+import { Base } from 'next/dist/client/components/react-dev-overlay/internal/styles/Base';
 
 export interface ExperienceItemProps {
   index: number;
@@ -24,7 +25,7 @@ export const ExperienceItem = (props: ExperienceItemProps) => {
     <li className={rowClasses}>
       <BaseView className={circleClasses}>
         <Image
-          className={'rounded-lg border z-10'}
+          className={'z-10 rounded-lg border'}
           src={experience.companyImage}
           width={48}
           height={48}
@@ -49,7 +50,7 @@ const Experience2: FC<{
   return (
     <button
       className={cn(
-        'hover:bg-accent flex w-full flex-col items-start gap-3 rounded-lg border p-3 text-left text-sm transition-all',
+        'hover:bg-accent flex w-full cursor-default flex-col items-start gap-3 rounded-lg p-3 text-left text-sm transition-all',
         className,
       )}
     >
@@ -58,7 +59,7 @@ const Experience2: FC<{
           <BaseView className='flex items-center gap-2'>
             <BaseText className='font-semibold' text={item.company} />
           </BaseView>
-          <BaseView className={cn('text-muted-foreground ml-auto flex flex-row gap-1 text-xs')}>
+          <BaseView className={'text-muted-foreground ml-auto flex flex-row gap-1 text-xs'}>
             <BaseText text={getFormattedDate(item.startDate)} />
             <BaseText text={'-'} />
             <BaseText text={item.endDate ? getFormattedDate(item.endDate) : 'Present'} />
@@ -84,10 +85,11 @@ const Experience2: FC<{
 
       {item.technologies && (
         <BaseView className='flex flex-row flex-wrap items-center gap-1'>
-          {item.technologies.map((label) => (
-            <Badge key={label} variant={'outline'}>
-              {label}
-            </Badge>
+          {item.technologies.map((label, index) => (
+            <li key={label} className={'font-semibold italic'}>
+              <BaseText className={'text-sm'} text={label}/>
+              {index + 1 < item.technologies!.length && <span className='text-muted-foreground'>|</span>}
+            </li>
           ))}
         </BaseView>
       )}

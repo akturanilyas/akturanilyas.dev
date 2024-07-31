@@ -5,7 +5,9 @@ import { cn } from '@/lib/utils';
 
 export const ExperienceSection = () => (
   <BaseView
-    className={'w-full gap-4 self-center bg-white text-slate-950 dark:bg-slate-950 dark:text-slate-50 md:w-8/12'}
+    className={
+      'bg-white text-slate-950 dark:bg-slate-950 dark:text-slate-50 w-full gap-4 self-center rounded-lg border-none bg-opacity-50 p-4 backdrop-blur-md backdrop-filter md:w-8/12'
+    }
   >
     <BaseView className={'relative h-full flex-row'}>
       <ul className={'flex flex-col gap-4'}>

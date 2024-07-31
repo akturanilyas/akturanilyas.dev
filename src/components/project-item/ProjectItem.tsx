@@ -12,7 +12,7 @@ export const ProjectItem: FC<ProjectItemProps> = (props) => {
 
   return (
     <BaseLink title={project.name} className={classes} link={project.githubUrl}>
-      <Card className={'h-full w-full hover:shadow-lg hover:bg-slate-100'}>
+      <Card className={'h-full w-full hover:shadow-lg bg-white hover:bg-opacity-60 bg-opacity-50 backdrop-filter backdrop-blur-md border-none'}>
         <CardHeader>
           <CardTitle>{project.name}</CardTitle>
         </CardHeader>
