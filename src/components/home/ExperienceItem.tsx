@@ -2,12 +2,10 @@ import { type Experience } from '@/constants/experience.constant';
 import BaseView from '../base-view/BaseView';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
-import { Badge } from '@/components/ui/badge';
 import { FC } from 'react';
 import { getFormattedDate, getFormattedDiff } from '@/lib/dateUtils';
 import BaseText from '@/components/base-text/BaseText';
 import { Dot } from 'lucide-react';
-import { Base } from 'next/dist/client/components/react-dev-overlay/internal/styles/Base';
 
 export interface ExperienceItemProps {
   index: number;
@@ -84,14 +82,14 @@ const Experience2: FC<{
       )}
 
       {item.technologies && (
-        <BaseView className='flex flex-row flex-wrap items-center gap-1'>
+        <ul className='flex flex-row flex-wrap items-center gap-1'>
           {item.technologies.map((label, index) => (
             <li key={label} className={'font-semibold italic'}>
-              <BaseText className={'text-sm'} text={label}/>
-              {index + 1 < item.technologies!.length && <span className='text-muted-foreground'>|</span>}
+              <BaseText className={'text-sm'} text={label} />
+              {index + 1 < item.technologies!.length && <span className='text-muted-foreground'> |</span>}
             </li>
           ))}
-        </BaseView>
+        </ul>
       )}
     </button>
   );

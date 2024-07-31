@@ -30,7 +30,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body
         className={'bg-primary px-4'}
         style={{
-            backgroundImage: 'url(/assets/background.png)',
+          backgroundImage: 'url(/assets/background.png)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
