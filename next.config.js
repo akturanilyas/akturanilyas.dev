@@ -3,11 +3,13 @@ const nextConfig = {
   redirects: async () => [
     {
       source: '/:path*',
-      has: [{type: 'host', value: 'www.akturanilyas.dev'}],
+      has: [{ type: 'host', value: 'www.akturanilyas.dev' }],
       destination: 'https://akturanilyas.dev/:path*',
-      permanent: true
-    }
-  ]
-}
+      permanent: true,
+    },
+  ],
+  reactStrictMode: true,
+  transpilePackages: ['@akturanilyas/ui'],
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
