@@ -15,7 +15,7 @@ export const ProjectItem: FC<ProjectItemProps> = (props) => {
         variant={'glass'}
         title={{ text: project.name, className: 'text-black font-bold' }}
         description={{ text: project.description, className: 'text-sm' }}
-        className={'h-full'}
+        className={'h-full hover:shadow-lg hover:bg-opacity-60'}
       />
     </BaseLink>
   );
