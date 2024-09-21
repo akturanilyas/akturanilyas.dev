@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import '@akturanilyas/ui/styles.css';
+
 import './globals.css';
 import { ReactNode } from 'react';
 import BaseView from '@/components/base-view/BaseView';

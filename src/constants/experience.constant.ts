@@ -1,6 +1,6 @@
 export type Experience = {
   startDate: string;
-  endDate?: string | null;
+  endDate?: string;
   title: string;
   description?: string;
   company: string;
