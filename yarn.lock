@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@akturanilyas/ui@0.0.18":
-  version "0.0.18"
-  resolved "https://registry.yarnpkg.com/@akturanilyas/ui/-/ui-0.0.18.tgz#2c6464f7e029da8ca9c96ca252610bd448f5408e"
-  integrity sha512-9vWnnDY7Ndxo08SLzJr4qE5+QdYE0UCC0wMs+FFcw9eTprZQtirU+NrmcPGoOBwRq5OunnW0TlxqRgdI5K8t0w==
+"@akturanilyas/ui@0.0.18-header-2":
+  version "0.0.18-header-2"
+  resolved "https://registry.yarnpkg.com/@akturanilyas/ui/-/ui-0.0.18-header-2.tgz#6eafb18b9aa950c986269ad57d51652d4fb2bb71"
+  integrity sha512-1iZtk7B02ExnUvmhyS8c31DD/Y4IhgvOK0Pp3owAiHb78LrnYS7yOqJ1Q0DwEJEq2bBrYfkIcHrx4EK+Ahygog==
 
 "@alloc/quick-lru@^5.2.0":
   version "5.2.0"

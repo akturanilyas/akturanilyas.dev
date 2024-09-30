@@ -7,6 +7,7 @@ export type Experience = {
   location: string;
   companyImage: string;
   imageColor: string;
+  imageBorder: string;
   technologies?: Array<string>;
   responsibilities?: Array<string>;
 };
@@ -18,7 +19,8 @@ export const EXPERIENCES: Array<Experience> = [
     company: 'Wingie Enuygun',
     location: 'Istanbul',
     companyImage: '/assets/img/wingie-enuygun-logo.png',
-    imageColor: 'bg-avg-logo-green',
+    imageColor: 'bg-enuygun-green',
+    imageBorder: 'border-enuygun-green',
     technologies: ['React', 'Next.js', 'TypeScript', 'React-Hook-Form', 'TailwindCSS', 'Styled-Components', 'Yup'],
   },
   {
@@ -28,7 +30,8 @@ export const EXPERIENCES: Array<Experience> = [
     company: 'KolayBi\'',
     location: 'Istanbul',
     companyImage: '/assets/img/kolaybi-logo.png',
-    imageColor: 'bg-avg-logo-blue',
+    imageColor: 'bg-kolaybi-blue',
+    imageBorder: 'border-kolaybi-blue',
     responsibilities: [
       'Developed a fully functional regular, responsive pre-accounting program website.',
       'Database design and coding of e-Invoice data has been implemented. 2 e-Invoice provider integrated',
@@ -66,7 +69,8 @@ export const EXPERIENCES: Array<Experience> = [
     company: 'KolayBi\'',
     location: 'Istanbul',
     companyImage: '/assets/img/kolaybi-logo.png',
-    imageColor: 'bg-avg-logo-blue',
+    imageColor: 'bg-kolaybi-blue',
+    imageBorder: 'border-kolaybi-blue',
     responsibilities: [
       'Existing projects configured to automate web deployments with Jenkins using Master-Slave architecture.',
       'Jenkins CI/CD, Web Deploy, AWS, Nginx',

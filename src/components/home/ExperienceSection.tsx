@@ -1,13 +1,14 @@
 import { EXPERIENCES } from '@/constants/experience.constant';
-import { Timeline, TimelineItem } from '@akturanilyas/ui';
+import { Timeline, TimelineItem, TimelineItemType } from '@akturanilyas/ui';
 import { ExperienceItem } from '@/components/home/ExperienceItem';
 
 export const ExperienceSection = () => {
-  const experiences = EXPERIENCES.map((experience) => ({
+  const experiences: Array<TimelineItemType> = EXPERIENCES.map((experience) => ({
     img: {
       src: experience.companyImage,
       alt: experience.company,
       title: experience.company,
+      className: experience.imageBorder,
     },
     color: experience.imageColor,
     children: (

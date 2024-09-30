@@ -1,11 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-.bg-avg-logo-green {
-  background-color: #3fc95d;
-}
-
-.bg-avg-logo-blue {
-  background: #1F89DB;
-}

@@ -2,7 +2,13 @@ import type { Config } from 'tailwindcss';
 
 const config = {
   darkMode: ['class'],
-  content: ['./pages/**/*.{ts,tsx}', './components/**/*.{ts,tsx}', './app/**/*.{ts,tsx}', './src/**/*.{ts,tsx}'],
+  content: [
+    './pages/**/*.{ts,tsx}',
+    './components/**/*.{ts,tsx}',
+    './app/**/*.{ts,tsx}',
+    './src/**/*.{ts,tsx}',
+    './src/constants/experience.constant.ts',
+  ],
   prefix: '',
   theme: {
     container: {
@@ -13,6 +19,10 @@ const config = {
       },
     },
     extend: {
+      colors: {
+        'enuygun-green': '#3fc95d',
+        'kolaybi-blue': '#1F89DB',
+      },
       keyframes: {
         'accordion-down': {
           from: { height: '0' },
