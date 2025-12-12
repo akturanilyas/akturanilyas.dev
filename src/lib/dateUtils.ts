@@ -1,6 +1,6 @@
 import moment from 'moment';
 
-export const dateDiff = (startDate: string, endDate: string | null, unitOfTime: string) =>
+export const dateDiff = (startDate: string, endDate: string | null) =>
   moment(endDate).diff(moment(startDate), 'day');
 
 export const getFormattedDate = (date: string) => moment(date).format('MMM YYYY');
