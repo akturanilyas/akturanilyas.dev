@@ -1,5 +1,5 @@
-import { FC } from 'react';
-import { cn } from '@/lib/utils';
+import type { FC } from 'react';
+import {cn} from "../../lib/utils.ts";
 
 export const Title: FC<{
   className?: string;

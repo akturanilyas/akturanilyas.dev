@@ -1,6 +1,6 @@
-import { ForwardedRef, forwardRef } from 'react';
+import {type ForwardedRef, forwardRef } from 'react';
 import { twMerge } from 'tailwind-merge';
-import { BaseViewProps } from './BaseView.interface';
+import type {BaseViewProps} from "./BaseView.interface.ts";
 
 const BaseView = forwardRef((props: BaseViewProps, ref: ForwardedRef<HTMLDivElement>) => {
   const { className } = props;

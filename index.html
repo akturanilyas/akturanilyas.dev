@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Primary Meta Tags -->
+    <title>İlyas AKTURAN - Software Engineer | Portfolio</title>
+    <meta name="title" content="İlyas AKTURAN - Software Engineer | Portfolio" />
+    <meta name="description" content="Software Engineer specializing in React, Next.js, TypeScript, and modern web development. View my projects, experience, and technical expertise." />
+    <meta name="keywords" content="Software Engineer, React, Next.js, TypeScript, Web Developer, Frontend Developer, Full Stack Developer, İlyas AKTURAN, Portfolio" />
+    <meta name="author" content="İlyas AKTURAN" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="Turkish" />
+    <meta name="revisit-after" content="7 days" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://akturanilyas.dev/" />
+    <meta property="og:title" content="İlyas AKTURAN - Software Engineer | Portfolio" />
+    <meta property="og:description" content="Software Engineer specializing in React, Next.js, TypeScript, and modern web development. View my projects, experience, and technical expertise." />
+    <meta property="og:image" content="https://akturanilyas.dev/assets/img/akturanilyas.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="tr_TR" />
+    <meta property="og:site_name" content="akturanilyas.dev" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://akturanilyas.dev/" />
+    <meta property="twitter:title" content="İlyas AKTURAN - Software Engineer | Portfolio" />
+    <meta property="twitter:description" content="Software Engineer specializing in React, Next.js, TypeScript, and modern web development. View my projects, experience, and technical expertise." />
+    <meta property="twitter:image" content="https://akturanilyas.dev/assets/img/akturanilyas.png" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://akturanilyas.dev/" />
+    
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      // Apply theme before React renders to prevent flash
+      (function() {
+        const savedTheme = localStorage.getItem('theme');
+        let theme = 'light';
+        if (savedTheme === 'dark' || savedTheme === 'light') {
+          theme = savedTheme;
+        } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          theme = 'dark';
+        }
+        if (theme === 'dark') {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

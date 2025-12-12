@@ -1,9 +1,13 @@
 export enum Technology {
   REACT = 'React',
+  NEXTJS = 'Next.js',
   ANGULAR = 'Angular',
   VUE = 'Vue',
   SVELTE = 'Svelte',
+  FLUTTER = 'Flutter',
   NODE = 'Node',
+  EXPRESS = 'Express.js',
+  TYPEORM = 'TypeORM',
   MONGODB = 'MongoDB',
   MYSQL = 'MySQL',
   POSTGRESQL = 'PostgreSQL',
@@ -12,4 +16,6 @@ export enum Technology {
   HTML = 'HTML',
   CSS = 'CSS',
   SASS = 'Sass',
+  TAILWIND = 'TailwindCSS',
+  PROVIDER = 'Provider',
 }

@@ -1,7 +1,6 @@
-import { LinkProps } from 'next/link';
-import { PropsWithChildren } from 'react';
+import type {HTMLProps} from "react";
 
-export type BaseLinkProps = Omit<PropsWithChildren<LinkProps>, 'href'> & {
+export type BaseLinkProps = HTMLProps<HTMLAnchorElement> & {
   title: string;
   link: string;
   className?: string;
